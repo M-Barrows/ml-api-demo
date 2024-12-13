@@ -1,7 +1,7 @@
-from flask import Blueprint, jsonify
+from fastapi import APIRouter
 
-main = Blueprint('main', __name__)
+router = APIRouter()
 
-@main.route('/')
+@router.get("/")
 def index():
-    return jsonify({"message": "Welcome to the API!"})
+    return {"message": "Welcome to the API!"}

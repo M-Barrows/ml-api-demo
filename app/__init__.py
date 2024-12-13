@@ -1,12 +1,9 @@
-from flask import Flask
-from app.routes import main
-import os
+from fastapi import FastAPI
 
-def create_app(config_class='config.Config'):
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object(config_class)
-    app.config.from_pyfile('config.py', silent=True)
+def create_app() -> FastAPI:
+    app = FastAPI()
 
-    app.register_blueprint(main)
+    from app.routes import router
+    app.include_router(router)
 
     return app
