@@ -36,6 +36,12 @@ Key Features:
     uvicorn run:app --reload
     ```
 
+6. View Docs at http://127.0.0.1:8000/docs
+
+7. Send a test request to http://127.0.0.1:8000/
+
+8. Send a test request to http://127.0.0.1:8000/conditional-return?n1=10&?n2=15
+
 # Main File Structure: 
 
 ```
@@ -43,6 +49,7 @@ flask_project/
 │
 ├── app/            
 │   ├── __init__.py     Needed to import routes.py as a module
+│   ├── utils.py        Holds extra functions/objects used in other places
 │   ├── routes.py       This is where all the API endpoints go
 │
 ├── instance/
