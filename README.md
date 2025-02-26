@@ -10,6 +10,12 @@ Key Features:
 
 # Getting Started
 
+## Docker 
+```sh
+docker build -t ml-demo . && docker build run -d -p 8000:8000 ml-demo
+```
+
+## Local Testing
 1. Install UV (Package Manager)
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -60,3 +66,8 @@ flask_project/
 ├── pyproject.toml      Project Metadata
 ├── uv.lock             Metadata for UV to use for dependency managment
 ```
+
+# Model Training
+
+This project is not meant to teach you the art of training a model. There are a million resources out on the interwebs for that. However, I will [link you to the documentation](https://github.com/uc-python/advanced-python-datasci/blob/master/notebooks/Case%20Study%20Solutions.ipynb) for the modelling technique I will be utilizing. This is documentation from a course I took years ago at the University of Cincinnati and was very helpful in putting the ML Model Lifecycle into context for me back then. 
+
