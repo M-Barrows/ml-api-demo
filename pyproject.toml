@@ -3,8 +3,18 @@ name = "ml-api-demo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12.0"
 dependencies = [
     "fastapi>=0.115.6",
     "uvicorn>=0.32.1",
+]
+
+[project.optional-dependencies]
+model_training = ["ipykernel"]
+training = [
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.0",
+    "pandas>=2.2.3",
+    "pytest>=8.3.4",
+    "scikit-learn>=1.6.1",
 ]
